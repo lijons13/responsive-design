@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:98vw;
+            height:98vh;
+
+        }
+        .container{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 13vh 85vh;
+            gap:5px;
+            
+        }
+        .small-container{
+            background-color: #070707;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .big-container{
+            background-color: #ffffff;
+        }
+        .img-1{
+            width:80px;
+            margin-left: 15px;
+            animation-name: bounce;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: linear;
+        }
+        @keyframes bounce {
+            0%,50%,100%{
+                transform: translate(0px);
+            }
+            25%{
+                transform: translate(-3px);
+            }
+            75%{
+                transform: translate(3px) 
+            }
+        }
+        a{
+            text-decoration: none;
+            margin-left:8px;
+            color:white;
+            font-size:22px;
+            
+        }
+        a:hover{
+            text-shadow: 1px 1px;
+            color:rgb(81, 81, 206);
+            transform: scale(1.2);
+            border-color: transparent;
+        }
+        .button-1{
+            padding:10px;
+            background-color: #0f4ba5;
+            border-radius: 5px;
+            color:aliceblue;
+            font-size:20px;
+            margin-right:15px;
+
+        }
+        .button-1:hover{
+            background-color: #3e66a1;
+            font-size: 22px;
+        }
+        @media screen and (min-width:800px) {
+            .menu{
+                display: none;
+            }
+            
+        } 
+        @media screen and (max-width:800px) {
+            a,button{
+                display: none;
+            }
+            .menu{
+                margin-right:25px;
+            }
+            
+        } 
+        .hv{
+            height:4px;
+            width:22px;
+            background-color: rgb(245, 245, 245);
+            margin-top: 4px;
+        }
+        .big-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+        }
+        .section-1{
+            background-color: #ffffff;
+           display: flex;
+           flex-direction: column;
+           margin-top:150px;
+           margin-left:50px;
+           gap: 10px;
+
+
+           
+           
+          
+
+        }
+        .section-2{
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sponser{
+        width:300px;
+        }
+        .one{
+            color:#070707;
+            font:bold;
+            font-size:30px;
+            font-weight: 300;
+        }
+        .two{
+            color: #0f4ba5;
+            font-weight: 200;
+            font-size:60px;
+            font:bolder;
+        }
+        .three{
+          font-size:20px;
+          color: #0f4ba5;
+
+            
+        }
+        .para{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+            color: #1a1717;
+        }
+        @media screen and (max-width:800px) {
+            .big-container{
+                display: flex;
+                flex-direction: column;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="small-container">
+            <div class="img-01">
+                <img src="https://cdn.logo.com/hotlink-ok/logo-social-sq.png" alt="" class="img-1">
+            </div>
+            <div class="links">
+                <a href="#" class="link0">Home</a><a href="#" class="link0">Blog</a><a href="#" class="link0">Contact</a><a href="#" class="link0">About</a>
+            </div>
+            <div>
+                <button class="button-1">
+                    Login
+                </button>
+                <div class="menu">
+                    <div class="hv"></div>
+                    <div class="hv"></div>
+                    <div class="hv"></div>
+                </div>
+            </div>
+        </div>
+        <div class="big-container">
+            <div class="section-1">
+                <div class="one">Say Hi To</div>
+                <div class="two">One Card</div>
+               <div class="three">Co-branded Card Issuers</div>
+                <img src="https://www.getonecard.app/images/legal/Banking_partners_24thJan_dark__.png" alt="" class="sponser">
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum omnis, aperiam adipisci eum quae est hic nemo ratione distinctio deleniti asperiores, at veniam aut natus eaque quia esse vitae tempore!</p>
+
+            </div>
+            <div class="section-2">
+              
+               <video controls width="500px">
+            <source src="https://www.getonecard.app/images/say_hi_2x_d3_.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
